@@ -23,12 +23,12 @@ jobs:
       # Compiler le programme
       - name: Build
         run: |
-          gcc -o app associativity.c
+          docker build -t associativite_app .
 
       # Exécuter le programme
       - name: Run program
         run: |
-          ./app  # Assurez-vous que cela génère le fichier answer_associativity.txt
+          docker run --rm -it associativite_app
 
       # Ajouter et pousser le fichier de résultats
       - name: Commit and push results
