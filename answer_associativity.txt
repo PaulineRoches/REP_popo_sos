@@ -1,2 +1,2 @@
-Sur 50000 expériences, l'associativité a été vérifiée 46322 fois.
-Le taux d'associativité est de 92.64%.
+Sur 50000 expériences, l'associativité a été vérifiée 46290 fois.
+Le taux d'associativité est de 92.58%.
