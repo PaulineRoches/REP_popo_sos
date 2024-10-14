@@ -10,6 +10,18 @@ void aleatoire(double *x, double *y, double *z) {
 }
 
 
+void ecrireResultats(int totalExperiences, int associativiteVerifiee, double tauxAssociativite) {
+    FILE *fichier = fopen("answer_associativity.txt", "w");
+    if (fichier == NULL) {
+        perror("Erreur lors de l'ouverture du fichier");
+        return;
+    }
+
+    fprintf(fichier, "Sur %d expériences, l'associativité a été vérifiée %d fois.\n", totalExperiences, associativiteVerifiee);
+    fprintf(fichier, "Le taux d'associativité est de %.2f%%.\n", tauxAssociativite);
+    fclose(fichier);
+}
+
 void calculerTauxAssociativite(int totalExperiences) {
     double x, y, z;
     int associativiteVerifiee = 0;
@@ -31,8 +43,7 @@ void calculerTauxAssociativite(int totalExperiences) {
     // Calculer le taux d'associativité
     double tauxAssociativite = (double)associativiteVerifiee / totalExperiences * 100;
 
-    printf("Sur %d expériences, l'associativité a été vérifiée %d fois.\n", totalExperiences, associativiteVerifiee);
-    printf("Le taux d'associativité est de %.2f%%.\n", tauxAssociativite);
+    ecrireResultats(totalExperiences, associativiteVerifiee, tauxAssociativite);
 }
 
 int main() {
