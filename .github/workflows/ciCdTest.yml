@@ -36,7 +36,9 @@ jobs:
           git config --global user.name 'github-actions'
           git config --global user.email 'github-actions@github.com'
           git add answer_associativity.txt
-          git commit -m "Ajout des résultats d'associativité"
+          git commit -m "Ajout des résultats d'associativité" || echo "Aucun changement à commit."
+          # Récupérer les changements du dépôt distant
+          git pull --rebase
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
