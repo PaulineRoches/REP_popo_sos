@@ -28,7 +28,7 @@ jobs:
       # Exécuter le programme
       - name: Run program
         run: |
-          docker run --rm -it associativite_app
+          docker run --rm associativite_app > answer_associativity.txt
 
       # Ajouter et pousser le fichier de résultats
       - name: Commit and push results
