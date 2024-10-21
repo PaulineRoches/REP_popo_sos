@@ -17,8 +17,9 @@ void ecrireResultats(int totalExperiences, int associativiteVerifiee, double tau
         return;
     }
 
-    fprintf(fichier, "Sur %d expériences, l'associativité a été vérifiée %d fois.\n", totalExperiences, associativiteVerifiee);
-    fprintf(fichier, "Le taux d'associativité est de %.2f%%.\n", tauxAssociativite);
+    //fprintf(fichier, "Sur %d expériences, l'associativité a été vérifiée %d fois.\n", totalExperiences, associativiteVerifiee);
+    //fprintf(fichier, "Le taux d'associativité est de %.2f%%.\n", tauxAssociativite);
+    fprintf(fichier, "%.2f", tauxAssociativite);
     fclose(fichier);
 }
 
