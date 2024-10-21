@@ -29,13 +29,13 @@ jobs:
       - name: Run program
         run: |
           docker run --rm associativite_app > answer_associativity.txt 
-          echo "$(cat answer_associativity.txt)"
 
       # Ajouter et pousser le fichier de résultats
       - name: Commit and push results
         run: |
           git config --global user.name 'github-actions'
           git config --global user.email 'github-actions@github.com'
+          git pull --force
           git add answer_associativity.txt
           git commit -m "Ajout des résultats d'associativité - $(date +'%Y-%m-%d %H:%M:%S')" || echo "Aucun changement à commit."
           git push
