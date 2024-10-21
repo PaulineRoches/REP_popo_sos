@@ -21,7 +21,7 @@ void ecrireResultats(int totalExperiences, int associativiteVerifiee, double tau
     //fprintf(fichier, "Le taux d'associativité est de %.2f%%.\n", tauxAssociativite);
     //fprintf(fichier, "%.2f", tauxAssociativite);
     //fclose(fichier);
-    printf("%.2f");
+    printf("%.2f\n", tauxAssociativite);
 }
 
 void calculerTauxAssociativite(int totalExperiences) {
