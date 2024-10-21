@@ -4,9 +4,9 @@
 
 void aleatoire(double *x, double *y, double *z) {
     // Générer trois chiffres aléatoires entre -100 et 100
-    *x = ((double)rand() / RAND_MAX) * 200 - 100; 
-    *y = ((double)rand() / RAND_MAX) * 200 - 100;
-    *z = ((double)rand() / RAND_MAX) * 200 - 100;
+    *x = ((double)drand48()/ RAND_MAX) * 200 - 100; 
+    *y = ((double)drand48()/ RAND_MAX) * 200 - 100; 
+    *z = ((double)drand48()/ RAND_MAX) * 200 - 100; 
 }
 
 

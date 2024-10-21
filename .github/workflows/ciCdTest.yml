@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "randomnisation" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "randomnisation" ]
   workflow_dispatch:
 
 jobs:
