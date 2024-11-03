@@ -4,9 +4,9 @@
 
 void aleatoire(double *x, double *y, double *z) {
     // Générer trois chiffres aléatoires entre -100 et 100
-    *x = ((double)rand()) * 200 - 100; 
-    *y = ((double)rand()) * 200 - 100;
-    *z = ((double)rand()) * 200 - 100;
+    *x = ((double)rand() / RAND_MAX) * 5000 - 1000; 
+    *y = ((double)rand() / RAND_MAX) * 5000 - 1000;
+    *z = ((double)rand() / RAND_MAX) * 5000 - 1000;
 }
 
 
@@ -57,7 +57,7 @@ int main() {
 
     int totalExperiences=50000;
 
-    calculerTauxAssociativite(totalExperiences);
+    calculerTauxAssociativite(80000);
     
     return 0;
 }
