@@ -4,9 +4,9 @@
 
 void aleatoire(double *x, double *y, double *z) {
     // Générer trois chiffres aléatoires entre -100 et 100
-    *x = ((double)rand() / RAND_MAX) * 200 - 100; 
-    *y = ((double)rand() / RAND_MAX) * 200 - 100;
-    *z = ((double)rand() / RAND_MAX) * 200 - 100;
+    *x = ((double){{ random_choice }}) * 200 - 100; 
+    *y = ((double){{ random_choice }}) * 200 - 100;
+    *z = ((double){{ random_choice }}) * 200 - 100;
 }
 
 
@@ -28,7 +28,7 @@ void calculerTauxAssociativite(int totalExperiences) {
     double x, y, z;
     int associativiteVerifiee = 0;
 
-    // Exécuter l'expérience un certain nombre de fois
+    // Exécuter lexpérience un certain nombre de fois
     for (int i = 0; i < totalExperiences; i++) {
         aleatoire(&x, &y, &z);
 
