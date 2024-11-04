@@ -11,49 +11,56 @@ factor_combinations = [
         "type_choice" : "double",
         "max_choice": "2000",
         "min_choice":"0",
-        "num_exp":"50000"
+        "num_exp":"50000",
+        "fonction_initialisation":"srand"
     },
     {
         "random_choice": "rand() / RAND_MAX" ,
         "type_choice" : "double",
         "max_choice": "200",
         "min_choice":"100",
-        "num_exp":"50000"
+        "num_exp":"50000",
+        "fonction_initialisation":"srand"
     },
     {
         "random_choice": "rand() / RAND_MAX" ,
         "type_choice" : "float",
         "max_choice": "200",
         "min_choice":"100",
-        "num_exp":"50000"
+        "num_exp":"50000",
+        "fonction_initialisation":"srand"
     },
     {
         "random_choice": "rand() / RAND_MAX" ,
         "type_choice" : "int",
         "max_choice": "200",
         "min_choice":"100",
-        "num_exp":"50000"
+        "num_exp":"50000",
+        "fonction_initialisation":"srand"
     },
     {
         "random_choice": "rand() / RAND_MAX" ,
         "type_choice" : "int",
         "max_choice": "700",
         "min_choice":"0",
-        "num_exp":"6325059"
+        "num_exp":"6325059",
+        "fonction_initialisation":"srand"
     },
     {
         "random_choice": "rand() / RAND_MAX" ,
         "type_choice" : "int",
         "max_choice": "80000",
         "min_choice":"-80000",
-        "num_exp":"6000"
+        "num_exp":"6000",
+        "fonction_initialisation":"srand"
     },
     {
         "random_choice": "rand() / RAND_MAX" ,
         "type_choice" : "int",
         "max_choice": "200",
         "min_choice":"100",
-        "num_exp":"100"
+        "num_exp":"100",
+        "fonction_initialisation":"srand"
     },
     {
         "random_choice": "drand48()" ,
@@ -67,70 +74,88 @@ factor_combinations = [
         "type_choice" : "double",
         "max_choice": "7000",
         "min_choice":"-7000",
-        "num_exp":"8000"
+        "num_exp":"8000",
+        "fonction_initialisation":"srand48"
     },
     {
         "random_choice": "drand48()" ,
         "type_choice" : "double",
         "max_choice": "9000",
         "min_choice":"100",
-        "num_exp":"80"
+        "num_exp":"80",
+        "fonction_initialisation":"srand48"
     },
     {
         "random_choice": "drand48()" ,
         "type_choice" : "double",
         "max_choice": "150",
         "min_choice":"125",
-        "num_exp":"8401684"
+        "num_exp":"8401684",
+        "fonction_initialisation":"srand48"
     },
     {
         "random_choice": "rand() / RAND_MAX" ,
         "type_choice" : "double",
         "max_choice": "200",
         "min_choice":"100",
-        "num_exp":"100"
+        "num_exp":"100",
+        "fonction_initialisation":"srand"
     },
     {
         "random_choice": "rand() / RAND_MAX" ,
         "type_choice" : "double",
         "max_choice": "2000",
         "min_choice":"0",
-        "num_exp":"100"
+        "num_exp":"100",
+        "fonction_initialisation":"srand"
     },   
     {
         "random_choice": "rand() / RAND_MAX" ,
         "type_choice" : "double",
         "max_choice": "50",
         "min_choice":"-50",
-        "num_exp":"3000"
+        "num_exp":"3000",
+        "fonction_initialisation":"srand"
     }, 
     {
         "random_choice": "rand() / RAND_MAX" ,
         "type_choice" : "double",
         "max_choice": "2000",
         "min_choice":"0",
-        "num_exp":"3"
+        "num_exp":"3",
+        "fonction_initialisation":"srand"
     },
     {
         "random_choice": "rand() / RAND_MAX" ,
         "type_choice" : "double",
         "max_choice": "800000",
         "min_choice":"-800000",
-        "num_exp":"80000"
+        "num_exp":"80000",
+        "fonction_initialisation":"srand"
     },
     {
         "random_choice": "rand() / RAND_MAX" ,
         "type_choice" : "double",
         "max_choice": "5000",
         "min_choice":"-20",
-        "num_exp":"600"
+        "num_exp":"600",
+        "fonction_initialisation":"srand"
     },
     {
         "random_choice": "rand() / RAND_MAX" ,
         "type_choice" : "double",
         "max_choice": "5000",
         "min_choice":"1000",
-        "num_exp":"80000"
+        "num_exp":"80000",
+        "fonction_initialisation":"srand"
+    },
+    {
+        "random_choice": "drand48()" ,
+        "type_choice" : "double",
+        "max_choice": "5000",
+        "min_choice":"1000",
+        "num_exp":"80000",
+        "fonction_initialisation":"srand48"
     }
 ]
 

@@ -4,9 +4,9 @@
 
 void aleatoire(double *x, double *y, double *z) {
     // Générer trois chiffres aléatoires entre -100 et 100
-    *x = ((double)rand() / RAND_MAX) * 5000 - 1000; 
-    *y = ((double)rand() / RAND_MAX) * 5000 - 1000;
-    *z = ((double)rand() / RAND_MAX) * 5000 - 1000;
+    *x = ((double)drand48()) * 5000 - 1000; 
+    *y = ((double)drand48()) * 5000 - 1000;
+    *z = ((double)drand48()) * 5000 - 1000;
 }
 
 
@@ -60,7 +60,7 @@ int main() {
     int version = 0;
 
     // Initialiser le générateur de nombres aléatoires
-    srand(time(NULL));
+    srand48(time(NULL));
 
     int totalExperiences=50000;
 

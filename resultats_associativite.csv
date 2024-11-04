@@ -1,19 +1,20 @@
 RandomChoice,TypeChoice,MaxChoice,MinChoice,NumExp,TauxAssociativite
-rand() / RAND_MAX,double,2000,0,50000,74.54
-rand() / RAND_MAX,double,200,100,50000,92.75
-rand() / RAND_MAX,float,200,100,50000,92.66
+rand() / RAND_MAX,double,2000,0,50000,74.68
+rand() / RAND_MAX,double,200,100,50000,92.83
+rand() / RAND_MAX,float,200,100,50000,92.64
 rand() / RAND_MAX,int,200,100,50000,100.0
 rand() / RAND_MAX,int,700,0,6325059,100.0
 rand() / RAND_MAX,int,80000,-80000,6000,100.0
 rand() / RAND_MAX,int,200,100,100,100.0
 drand48(),double,200,100,50000,100.0
-drand48(),double,7000,-7000,8000,74.44
+drand48(),double,7000,-7000,8000,74.99
 drand48(),double,9000,100,80,73.75
-drand48(),double,150,125,8401684,88.18
-rand() / RAND_MAX,double,200,100,100,89.0
-rand() / RAND_MAX,double,2000,0,100,68.0
-rand() / RAND_MAX,double,50,-50,3000,74.9
+drand48(),double,150,125,8401684,88.16
+rand() / RAND_MAX,double,200,100,100,94.0
+rand() / RAND_MAX,double,2000,0,100,79.0
+rand() / RAND_MAX,double,50,-50,3000,72.6
 rand() / RAND_MAX,double,2000,0,3,66.67
-rand() / RAND_MAX,double,800000,-800000,80000,72.82
-rand() / RAND_MAX,double,5000,-20,600,77.67
-rand() / RAND_MAX,double,5000,1000,80000,79.84
+rand() / RAND_MAX,double,800000,-800000,80000,72.86
+rand() / RAND_MAX,double,5000,-20,600,75.0
+rand() / RAND_MAX,double,5000,1000,80000,79.7
+drand48(),double,5000,1000,80000,80.48
