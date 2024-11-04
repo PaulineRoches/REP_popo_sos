@@ -11,16 +11,23 @@ void aleatoire(double *x, double *y, double *z) {
 
 
 void ecrireResultats(int totalExperiences, int associativiteVerifiee, double tauxAssociativite) {
-    /*FILE *fichier = fopen("answer_associativity.txt", "w");
+     // Ouvrir le fichier CSV en mode écriture
+    /*FILE *fichier = fopen("resultats_associativite.csv", "w");
     if (fichier == NULL) {
         perror("Erreur lors de l'ouverture du fichier");
         return;
-    }*/
+    }
 
-    //fprintf(fichier, "Sur %d expériences, l'associativité a été vérifiée %d fois.\n", totalExperiences, associativiteVerifiee);
-    //fprintf(fichier, "Le taux d'associativité est de %.2f%%.\n", tauxAssociativite);
-    //fprintf(fichier, "%.2f", tauxAssociativite);
-    //fclose(fichier);
+    // Écrire l'en-tête du fichier CSV
+    fprintf(fichier, "Total des expériences,Associativité vérifiée,Taux d'associativité\n");
+
+    // Écrire les données dans le fichier
+    fprintf(fichier, "%d,%d,%.2f\n", totalExperiences, associativiteVerifiee, tauxAssociativite);
+
+    // Fermer le fichier
+    fclose(fichier);*/
+
+    // Afficher le taux d'associativité dans la console pour vérification
     printf("%.2f\n", tauxAssociativite);
 }
 

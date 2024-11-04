@@ -1,0 +1,13 @@
+RandomChoice,TypeChoice,MaxChoice,MinChoice,NumExp,TotalExperiences,TauxAssociativite
+rand() / RAND_MAX,double,2000,0,50000,50000,74.69
+rand() / RAND_MAX,double,200,100,50000,50000,92.54
+rand() / RAND_MAX,float,200,100,50000,50000,92.44
+rand() / RAND_MAX,int,200,100,50000,50000,100.0
+drand48(),double,200,100,50000,50000,100.0
+rand() / RAND_MAX,double,200,100,100,100,93.0
+rand() / RAND_MAX,double,2000,0,100,100,72.0
+rand() / RAND_MAX,double,50,-50,3000,3000,73.37
+rand() / RAND_MAX,double,2000,0,3,3,33.33
+rand() / RAND_MAX,double,800000,-800000,80000,80000,73.09
+rand() / RAND_MAX,double,5000,-20,600,600,72.67
+rand() / RAND_MAX,double,5000,1000,80000,80000,79.5
