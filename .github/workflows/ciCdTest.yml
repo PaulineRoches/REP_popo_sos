@@ -12,32 +12,36 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Étape pour récupérer le dépôt
       - uses: actions/checkout@v4
 
       # Installer build-essential et gcc
-      - name: Install build-essential
+      - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y build-essential
+          sudo apt-get install -y build-essential python3 python3-venv
 
-      # Compiler le programme
-      - name: Build
+      # Configurer un environnement Python et installer Jinja2
+      - name: Set up Python environment
         run: |
-          docker build -t associativite_app .
+          python3 -m venv venv
+          source venv/bin/activate
+          pip install --no-cache-dir jinja2
 
-      # Exécuter le programme
-      - name: Run program
+      # Exécuter le script template.py pour générer les fichiers de résultat
+      - name: Run template script
         run: |
-          docker run --rm associativite_app
+          source venv/bin/activate
+          python template.py
 
-      # Ajouter et pousser le fichier de résultats
+      # Ajouter et pousser les fichiers de résultats
       - name: Commit and push results
-        run: |
-          git config --global user.name 'github-actions'
-          git config --global user.email 'github-actions@github.com'
-          git pull --force
-          git add answer_associativity.txt
-          git commit -m "Ajout des résultats d'associativité - $(date +'%Y-%m-%d %H:%M:%S')" || echo "Aucun changement à commit."
-          git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase  # Mettre à jour la branche locale pour éviter les conflits
+          git add resultats_associativite.csv resultats_associativite_etendu.csv
+          git commit -m "Mise à jour des résultats - $(date +'%Y-%m-%d %H:%M:%S')" || echo "Aucun changement à commit."
+          git push
