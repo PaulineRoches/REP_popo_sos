@@ -35,11 +35,53 @@ factor_combinations = [
         "num_exp":"50000"
     },
     {
+        "random_choice": "rand() / RAND_MAX" ,
+        "type_choice" : "int",
+        "max_choice": "700",
+        "min_choice":"0",
+        "num_exp":"6325059"
+    },
+    {
+        "random_choice": "rand() / RAND_MAX" ,
+        "type_choice" : "int",
+        "max_choice": "80000",
+        "min_choice":"-80000",
+        "num_exp":"6000"
+    },
+    {
+        "random_choice": "rand() / RAND_MAX" ,
+        "type_choice" : "int",
+        "max_choice": "200",
+        "min_choice":"100",
+        "num_exp":"100"
+    },
+    {
         "random_choice": "drand48()" ,
         "type_choice" : "double",
         "max_choice": "200",
         "min_choice":"100",
         "num_exp":"50000"
+    },
+    {
+        "random_choice": "drand48()" ,
+        "type_choice" : "double",
+        "max_choice": "7000",
+        "min_choice":"-7000",
+        "num_exp":"8000"
+    },
+    {
+        "random_choice": "drand48()" ,
+        "type_choice" : "double",
+        "max_choice": "9000",
+        "min_choice":"100",
+        "num_exp":"80"
+    },
+    {
+        "random_choice": "drand48()" ,
+        "type_choice" : "double",
+        "max_choice": "150",
+        "min_choice":"125",
+        "num_exp":"8401684"
     },
     {
         "random_choice": "rand() / RAND_MAX" ,
@@ -103,7 +145,7 @@ with open("resultats_associativite.csv", mode="w", newline="") as csvfile:
     csv_writer = csv.writer(csvfile)
     # Écrire l'en-tête
     csv_writer.writerow([
-        "RandomChoice", "TypeChoice", "MaxChoice", "MinChoice", "NumExp", "TotalExperiences", "TauxAssociativite"
+        "RandomChoice", "TypeChoice", "MaxChoice", "MinChoice", "NumExp", "TauxAssociativite"
     ])
 
     for factors in factor_combinations:
@@ -130,7 +172,6 @@ with open("resultats_associativite.csv", mode="w", newline="") as csvfile:
             factors["max_choice"], 
             factors["min_choice"], 
             factors["num_exp"],
-            factors["num_exp"],  # Peut être modifié pour `totalExperiences` si nécessaire
             taux_associativite
         ])
 
