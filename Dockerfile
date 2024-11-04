@@ -8,8 +8,9 @@ COPY . /app
 
 # Installer Python et les dépendances nécessaires pour Jinja2
 RUN apt-get update && \
-    apt-get install -y python3 python3-pip && \
-    pip3 install jinja2
+    apt-get upgrade -y && \
+    apt-get install -y --no-install-recommends python3 python3-pip && \
+    pip3 install --no-cache-dir jinja2
 
 # Installer build-essential (si d'autres outils sont nécessaires pour gcc)
 RUN apt-get install -y build-essential
