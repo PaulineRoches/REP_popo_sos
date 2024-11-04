@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ "processeur" ]
+    branches: [ "template" ]
   pull_request:
-    branches: [ "processeur" ]
+    branches: [ "template" ]
   workflow_dispatch:
 
 jobs:
@@ -28,7 +28,7 @@ jobs:
       # Exécuter le programme
       - name: Run program
         run: |
-          docker run --rm associativite_app > answer_associativity.txt 
+          docker run --rm associativite_app
 
       # Ajouter et pousser le fichier de résultats
       - name: Commit and push results
