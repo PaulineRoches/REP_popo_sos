@@ -6,14 +6,14 @@ WORKDIR /app
 # Copier tous les fichiers nécessaires dans le conteneur
 COPY . /app
 
-# Installer Python et les dépendances nécessaires pour Jinja2
+# Installer Python, pip et créer un environnement virtuel
 RUN apt-get update && \
-    apt-get upgrade -y && \
-    apt-get install -y --no-install-recommends python3 python3-pip && \
-    pip3 install --no-cache-dir jinja2
+    apt-get install -y python3 python3-venv && \
+    python3 -m venv /app/venv && \
+    /app/venv/bin/pip install --no-cache-dir jinja2
 
-# Installer build-essential (si d'autres outils sont nécessaires pour gcc)
-RUN apt-get install -y build-essential
+# Définir l’environnement virtuel dans le PATH
+ENV PATH="/app/venv/bin:$PATH"
 
-# Commande pour exécuter template.py qui lance les tests et génère les résultats
+# Définir la commande par défaut
 CMD ["python3", "template.py"]
