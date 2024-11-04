@@ -39,8 +39,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
           git pull --rebase  # Mettre à jour la branche locale pour éviter les conflits
           git add resultats_associativite.csv resultats_associativite_etendu.csv
           git commit -m "Mise à jour des résultats - $(date +'%Y-%m-%d %H:%M:%S')" || echo "Aucun changement à commit."
