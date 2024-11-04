@@ -19,4 +19,4 @@ Nous avons mis en place un GitHub Actions avec le `Dockerfile` : il teste le pro
 
 ## TP3
 
-Le TP3 est réalisé dans le Jupyter Notebook `tp3.ipynb`.
+Pour le TP3, il faut se placer dans la branche `template`.
