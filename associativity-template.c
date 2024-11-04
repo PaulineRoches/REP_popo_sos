@@ -2,11 +2,11 @@
 #include <stdlib.h>
 #include <time.h>
 
-void aleatoire(int *x, int *y, int *z) {
+void aleatoire(double *x, double *y, double *z) {
     // Générer trois chiffres aléatoires entre -100 et 100
-    *x = ((int)drand48()) * 5000 - 1000; 
-    *y = ((int)drand48()) * 5000 - 1000;
-    *z = ((int)drand48()) * 5000 - 1000;
+    *x = ((double)rand() / RAND_MAX) * 50 - 0; 
+    *y = ((double)rand() / RAND_MAX) * 50 - 0;
+    *z = ((double)rand() / RAND_MAX) * 50 - 0;
 }
 
 
@@ -32,7 +32,7 @@ void ecrireResultats(int totalExperiences, int associativiteVerifiee, double tau
 }
 
 void calculerTauxAssociativite(int totalExperiences) {
-    int x, y, z;
+    double x, y, z;
     int associativiteVerifiee = 0;
 
     // Exécuter lexpérience un certain nombre de fois
@@ -40,8 +40,8 @@ void calculerTauxAssociativite(int totalExperiences) {
         aleatoire(&x, &y, &z);
 
         // Calculer les résultats
-        int res1 = (x + y) + z;
-        int res2 = x + (y + z);
+        double res1 = (x + y) + z;
+        double res2 = x + (y + z);
 
         // Vérifier l'associativité
         if (res1 == res2) {
@@ -56,11 +56,11 @@ void calculerTauxAssociativite(int totalExperiences) {
 }
 
 int main() {
-    int x, y, z;
+    double x, y, z;
     int version = 0;
 
     // Initialiser le générateur de nombres aléatoires
-    (time(NULL));
+    srand(time(NULL));
 
     int totalExperiences=50000;
 

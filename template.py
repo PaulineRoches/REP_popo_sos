@@ -178,8 +178,8 @@ num_exp_choices = ["50000", "100", "3000", "3", "80000", "600"]
 
 # Définir la valeur de fonction_d_initialisation pour chaque choix de random_choice
 fonction_d_initialisation_map = {
-    "rand() / RAND_MAX": "srand(time(NULL));",  # Initialisation pour rand()
-    "drand48()": "srand48(time(NULL));"         # Initialisation pour drand48()
+    "rand() / RAND_MAX": "srand",  # Initialisation pour rand()
+    "drand48()": "srand48"         # Initialisation pour drand48()
 }
 
 # Générer toutes les combinaisons possibles de facteurs
@@ -235,7 +235,7 @@ with open("resultats_associativite_etendu.csv", mode="w", newline="") as csvfile
             "max_choice": factors[2],
             "min_choice": factors[3],
             "num_exp": factors[4],
-            "fonction_d_initialisation": fonction_d_initialisation_map[factors[0]]
+            "fonction_initialisation": fonction_d_initialisation_map[factors[0]]
         }
 
         # Générer et écrire le code C
